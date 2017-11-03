@@ -24,6 +24,9 @@
 <body>
 
 
+<div class="black_square"></div>
+
+<div>
 
 <div id="carousel_container" class="container-fluid">
     <!--                 TOP PART WITH IMAGES AND ARRAYS   -->
@@ -68,6 +71,9 @@
     <div id="stars"></div>
     <div id="author_slider">CAMERON DOWMAN</div>
 </div>
+
+<div class="black_square"></div>
+
 </body>
     <script src="javascript/carausel.js"></script>
 

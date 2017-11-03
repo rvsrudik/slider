@@ -90,17 +90,6 @@ body
     /*background-color: #8c8f94;*/
 }
 
-#nublya
-{
-
-    /*position: absolute;*/
-    /*margin: 0 auto;*/
-    /*background-color: #01301c;*/
-    /*width: 115px;*/
-    /*height: 100px;*/
-
-
-}
 
 #image_1, #image_0
 {
@@ -120,7 +109,6 @@ body
     width: 33.3333%;
     left: 33.3333%;
     z-index: 5;
-    /*text-align: center;*/
     /*background-color: #ff0012;*/
 }
 #image_3, #image_last
@@ -135,7 +123,6 @@ body
 .slider_images
 {
     padding: 0;
-    /*text-align: center;*/
     /*background-color: yellow;*/
 
 }
@@ -145,10 +132,15 @@ body
     /*background-color: bisque;*/
     font-family: 'Lato', sans-serif;
     max-width: 420px;
+    height: 50px;
     margin: 0 auto;
     font-weight: 500;
     font-size: 10px;
     text-align: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+
 }
 
 #title_slider
@@ -158,6 +150,9 @@ body
     font-size: 24px;
     text-align: center;
     /*background-color: blueviolet;*/
+    margin-bottom: 30px;
+    overflow: hidden;
+    height: 30px;
 
 }
 
@@ -172,6 +167,7 @@ body
     max-width: 420px;
     margin: 0 auto;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 
@@ -181,5 +177,14 @@ body
     width: 120px;
     background-image: url("../img/star.png");
     margin: 0 auto;
+    margin-bottom: 40px;
+
 }
 
+
+.black_square
+{
+    width: 100%;
+    height: 75px;
+    background-color: black;
+}
