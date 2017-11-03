@@ -1,3 +1,4 @@
+var one_star_width = 24;
 
 var left_arrow = $('#left_arrow');
 var right_arrow = $('#right_arrow');
@@ -14,6 +15,9 @@ var right_img = $('#right_pic');
 
 var title_div = $('#title_slider');
 var text_div = $('#text_slider');
+var author_div = $('#author_slider');
+var stars_div = $('#stars');
+
 
 
 var central_image_id = 0;
@@ -69,11 +73,7 @@ function ft_create_slide_obj(src, title, text, stars, author) {
     return (obj);
 }
 
-
-
-
 var slidesTab = [];
-
 
 // slidesTab.push(ft_create_slide_obj("img/0.jpg", "New Providence is the great UI kit", "Just then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door.", 2, "Cameron Dowman"));
 // slidesTab.push(ft_create_slide_obj("img/raz.png", "Sebe derni", "W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.", 5, "Pes Sobaka"));
@@ -99,16 +99,29 @@ slidesTab.push(ft_create_slide_obj("img/7.png", "Title 7" ,"With all the love in
 slidesTab.push(ft_create_slide_obj("img/8.png", "Title 8", "W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.", 5, "Pes Sobaka"));
 slidesTab.push(ft_create_slide_obj("img/9.png", "Title 9", "Property sets one or more background images for an element By default, a background-image is placed at the top-left corner of an element, and repeated both vertically and horizontally.", 6, "Vitya Howard"));
 
-
 function ft_initial_slider()
 {
     var left_img = slidesTab[1].img;
     var central_img = slidesTab[0].img;
     var right_img = slidesTab[slidesTab.length - 1].img;
 
+
     $(left_img).attr('id', 'left_pic');
     $(central_img).attr('id', 'central_pic');
     $(right_img).attr('id', 'right_pic');
+
+    title_div.empty();
+    title_div.append(slidesTab[0].title);
+    text_div.empty();
+    text_div.append(slidesTab[0].text);
+    author_div.empty();
+    author_div.append(slidesTab[0].author);
+
+    var star_line_width;
+    var stars_n = slidesTab[0].stars;
+    star_line_width = stars_n  * one_star_width;
+
+    stars_div.css("width", star_line_width);
     div_image_right.append(right_img);
     div_image_center.append(central_img);
     div_image_left.append(left_img);
@@ -123,8 +136,6 @@ function ft_move_horisontal(element, distance_percent, speed)
     }, speed);
 }
 
-
-
 function ft_change_zero_image(zero_image_id, zero_img_div, image_tab) {
 
     var slides_count = image_tab.length;
@@ -136,8 +147,6 @@ function ft_change_zero_image(zero_image_id, zero_img_div, image_tab) {
     return (new_zero_img);
 }
 
-
-
 function ft_margin_animation(obj, horisontal, vertical, time)
 {
     obj.animate({
@@ -146,7 +155,6 @@ function ft_margin_animation(obj, horisontal, vertical, time)
         queue: false
     }, time);
 }
-
 
 function ft_margin_hide_left(obj, time) {
     var obj_width = $(obj).width();
@@ -159,10 +167,6 @@ function ft_margin_hide_right(obj, time) {
 
     ft_margin_animation(obj, (obj_width * 2), "+=0", time);
 }
-
-
-
-
 
 
 function ft_change_title(slide_id) {
@@ -189,7 +193,6 @@ function ft_change_description(slide_id) {
 
 function ft_change_stars(slide_id) {
     var star_line_width;
-    var one_star_width = 24;
     var stars_n = slidesTab[slide_id].stars;
     var stars_div = $('#stars');
     star_line_width = stars_n  * one_star_width;
@@ -201,8 +204,6 @@ function ft_change_stars(slide_id) {
 }
 
 function ft_change_author(slide_id) {
-    var author_div = $('#author_slider');
-
     $.when(
         // author_div.fadeTo( 300, 0.0 )
     ).then(function () {
@@ -211,8 +212,6 @@ function ft_change_author(slide_id) {
     }).then(function () {
         // author_div.fadeTo( 400, 1.0 )
     });
-
-
 }
 
 function ft_change_slide_contant(slide_id)
@@ -222,8 +221,6 @@ function ft_change_slide_contant(slide_id)
     ft_change_stars(slide_id);
     ft_change_author(slide_id);
 }
-
-
 
 right_arrow.on("click", function () {
 
@@ -281,7 +278,6 @@ right_arrow.on("click", function () {
     center_img.removeAttr("id").attr({"id" : "right_pic"});
 
 });
-
 
 
 left_arrow.on("click", function () {

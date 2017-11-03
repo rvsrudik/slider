@@ -66,10 +66,10 @@
         </div>
     </div>
     <!--               END  TOP PART WITH IMAGES AND ARRAYS   -->
-    <div id="title_slider" class="">New Providence is the great UI kit</div>
-    <div id="text_slider">"Just then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door."</div>
+    <div id="title_slider" class=""></div>
+    <div id="text_slider"></div>
     <div id="stars"></div>
-    <div id="author_slider">CAMERON DOWMAN</div>
+    <div id="author_slider"></div>
 </div>
 
 <div class="black_square"></div>
