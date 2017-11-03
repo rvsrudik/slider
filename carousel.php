@@ -38,19 +38,19 @@
         <div id="images" class="col-xs-8">
 
             <div id="image_0" class="slider_images">
-                <img id="zero_pic" src="img/user4.png" alt="">
+<!--                <img id="zero_pic" src="img/user1.png" alt="">-->
             </div>
 
             <div id="image_1" class="slider_images">
-                   <img id="left_pic" src="img/3.png" alt="">
+<!--                   <img id="left_pic" src="img/raz.png" alt="">-->
             </div>
 
             <div id="image_2" class="slider_images">
-                    <img id="central_pic"  src="img/2.png" alt="">
+<!--                    <img id="central_pic"  src="img/user1.png" alt="">-->
             </div>
 
             <div id="image_3" class="slider_images">
-                <img id="right_pic"  src="img/raz.png" alt="">
+<!--                <img id="right_pic"  src="img/9.png" alt="">-->
             </div>
 
         </div>
@@ -70,4 +70,5 @@
 </div>
 </body>
     <script src="javascript/carausel.js"></script>
+
 </html>
